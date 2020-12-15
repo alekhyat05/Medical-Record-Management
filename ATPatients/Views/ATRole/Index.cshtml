@@ -1,0 +1,71 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+@model IEnumerable<IdentityRole>
+@{
+    ViewData["Title"] = "List of  Role";
+}
+
+<h1>ListRole</h1>
+
+
+@if (Model.Any())
+{
+<div class="row">
+    <div class="col-md-4">
+        <form method="Post" asp-action="CreateRole" >
+            <h4> Create Role</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label>Create a new Role</label>
+                <input  name="roleNameInput" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Role</button>
+        </form>
+    </div>
+
+</div>@*
+   <a class="btn btn-primary" asp-controller="Administration" asp-action="CreateRole"> Add Role</a>*@
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Role Name
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var role in Model)
+            {
+                <tr>
+                    <td>
+                       
+                        <a asp-controller="ATRole" asp-action="EditUsersInRole" asp-route-roleName="@role.Name" asp-route-roleId="@role.Id">@role.Name</a>
+
+                    </td>
+                    <td method="post" action="DeleteRole">
+                        <a class="btn btn-primary"  asp-action="DeleteRole"
+                           asp-route-id="@role.Id">Delete Role</a>
+                        
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="card">
+        <div class="card-header">
+            No Roles created
+        </div>
+        <div class="card-body">
+            <a class="btn btn-primary" asp-controller="Administration" asp-action="CreateRole"> Add Role</a>
+        </div>
+        <div class="card-footer"></div>
+    </div>
+}
+

@@ -1,0 +1,9 @@
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\bin\Debug\netcoreapp3.1\ATClassLibrary.deps.json
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\bin\Debug\netcoreapp3.1\ATClassLibrary.dll
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\bin\Debug\netcoreapp3.1\ATClassLibrary.pdb
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\obj\Debug\netcoreapp3.1\ATClassLibrary.csprojAssemblyReference.cache
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\obj\Debug\netcoreapp3.1\ATClassLibrary.AssemblyInfoInputs.cache
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\obj\Debug\netcoreapp3.1\ATClassLibrary.AssemblyInfo.cs
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\obj\Debug\netcoreapp3.1\ATClassLibrary.dll
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\obj\Debug\netcoreapp3.1\ATClassLibrary.pdb
+C:\Users\alekh\OneDrive\Semester2\Microsoft Web Tech\Code\Mine\Dabba\ATPatients\ATPatients\ATClassLibrary\obj\Debug\netcoreapp3.1\ATClassLibrary.csproj.CoreCompileInputs.cache

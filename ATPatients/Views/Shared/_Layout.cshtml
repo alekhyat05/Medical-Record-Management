@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AT Medical diagnostics</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    nav {
+        font-family: monospace;
+    }
+
+    ul {
+        background: darkorange;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    li {
+        color: #fff;
+        display: block;
+        float: left;
+        padding: 1rem;
+        position: relative;
+        text-decoration: none;
+        transition-duration: 0.5s;
+    }
+
+        li a {
+            color: #fff;
+        }
+
+        li:hover {
+            background: red;
+            cursor: pointer;
+        }
+
+    ul li ul {
+        background: orange;
+        visibility: hidden;
+        opacity: 0;
+        min-width: 5rem;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: none;
+    }
+
+        ul li:hover > ul,
+        ul li ul:hover {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 100%;
+        }
+</style>
+       
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <img src="~/images.png" style="height:100px"/>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AT Medical diagnostics</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul id="nav" class="navbar-nav flex-grow-1">
+                        @*<li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ATCountry" asp-action="Index">Country</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ATMedicationType" asp-action="Index">Medication Types</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ATPatient" asp-action="Index">Patient</a>
+                        </li>
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <li class="nav-item">
+                                Security
+                                <ul>
+                                    <li>
+                                        <a class="nav-link text-dark" asp-controller="ATRole" asp-action="Index">Role Maintainence</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">User Maintainence</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        }
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <h2 class="text-danger font-weight-bold">@TempData["MedicationData"]</h2>
+            <div class="text-danger font-weight-bold">
+                @TempData["message"]
+            </div>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+       
+
+        <div class="container" >
+            <a href="mailto: atamarapalli3028@sample.com"> &copy; Alekhya Tamarapalli</a>
+            CAD
+            <a asp-area="" asp-controller="Home" asp-action="Index" style="float:right;text-align:right">Home</a>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy" style="float:right;text-align:right">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
